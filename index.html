@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="list-logo flex">
+        <img src="./Assets/Logo.png" alt="" />
+      </div>
+
+      <div class="list-body flex">
+        <form class="input-btn flex">
+          <div class="input-div flex">
+            <input
+              type="text"
+              id="task"
+              placeholder="Enter Your To-do List Task"
+              required
+              value=""
+            />
+            <input
+              type="date"
+              id="date"
+              value=""
+              placeholder="dd-mm-yyyy"
+              required
+            />
+            <select class="priority" required>
+              <option value="" selected disabled>Choose Priority</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <button class="add flex" type="submit">
+            Add<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_3950_37)">
+                <path
+                  d="M7.98373 1.45158C9.27565 1.45158 10.5386 1.83468 11.6128 2.55244C12.687 3.27019 13.5242 4.29037 14.0186 5.48395C14.513 6.67754 14.6424 7.99092 14.3903 9.25802C14.1383 10.5251 13.5161 11.689 12.6026 12.6026C11.6891 13.5161 10.5252 14.1382 9.25807 14.3903C7.99097 14.6423 6.67759 14.5129 5.484 14.0185C4.29042 13.5241 3.27025 12.6869 2.55249 11.6127C1.83473 10.5385 1.45163 9.2756 1.45163 7.98368C1.45832 6.25332 2.14867 4.59574 3.37223 3.37218C4.59579 2.14862 6.25337 1.45827 7.98373 1.45158ZM7.98373 5.77648e-06C6.40611 0.00645971 4.86578 0.480174 3.55717 1.36134C2.24857 2.24252 1.23037 3.49164 0.631106 4.95102C0.031846 6.4104 -0.121605 8.01461 0.190125 9.56114C0.501855 11.1077 1.26479 12.5272 2.38262 13.6404C3.50044 14.7537 4.92304 15.5108 6.47082 15.8162C8.01861 16.1217 9.62218 15.9617 11.0791 15.3564C12.536 14.7512 13.781 13.7279 14.6568 12.4158C15.5326 11.1036 16 9.5613 16.0001 7.98368C16.0001 6.93249 15.7925 5.89165 15.3892 4.92089C14.986 3.95014 14.395 3.06857 13.6502 2.32679C12.9053 1.58501 12.0214 0.997618 11.049 0.598327C10.0766 0.199035 9.0349 -0.00429452 7.98373 5.77648e-06Z"
+                  fill="#F2F2F2"
+                />
+                <path
+                  d="M11.707 7.38127H8.4954V4.16966H7.41397V7.38127H4.19873V8.4627H7.41397V11.6743H8.4954V8.4627H11.707V7.38127Z"
+                  fill="#F2F2F2"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_3950_37">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+
+        <div class="works flex">
+          <div class="works-1 flex">
+            
+            <div class="box-1 flex">
+              <span class="td">TO-DO</span>
+              <span class="td-txt">0</span>
+            </div>
+            <div class="box-2 flex">
+              <span class="low">Low Priority</span>
+              <span class="low-txt">0</span>
+            </div>
+            <div class="box-3 flex">
+              <span class="med">Medium Priority</span>
+              <span class="med-txt">0</span>
+            </div>
+            <div class="box-4 flex">
+              <span class="high">High Priority</span>
+              <span class="high-txt">0</span>
+            </div>
+          </div>
+          <div class="box-5 flex">
+            <div class="search">
+              <input type="text" placeholder="Search Task" value="" class="searchtask">
+            </div>
+            <div class="filter">
+              <select name="filtertaskdrop" id="taskfilter" class="priority">
+                <option value="Priority" name="filtertaskdrop" selected disabled>Priority</option>
+                <option value="All" name="filtertaskdrop">All</option>
+                <option value="Low" name="filtertaskdrop">Low</option>
+                <option value="Medium" name="filtertaskdrop">Medium</option>
+                <option value="High" name="filtertaskdrop">High</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="works-2">
+            
+
+            <div class="boss flex">
+              <!-- <div class="add-task flex">
+                <div class="to-do-edit flex">
+                  <input type="checkbox" class="check-complete" />
+                  <p class="date-txt">01-04-2024</p>
+                  <p class="priority-txt">Medium</p>
+                </div>
+  
+                <div class="filter-task">
+                  <select name="task-filt" class="task-filt" value="">
+                    <option value="To-Do" selected disabled>To-Do</option>
+                    <option value="In-Progress">In-Progress</option>
+                    <option class="opt" value="Done" disabled>Done</option>
+                  </select>
+                </div>
+  
+                <div class="show-task-label flex">
+                  <input type="text" id="show-task" value="" />
+                  <label for="show-task" class="edit-label"
+                    >Lorem ipsum dolor sit amet</label
+                  >
+                </div>
+  
+                <div class="frm-edit flex">
+                  <button class="edit">
+                    <i
+                      class="fa-regular fa-pen-to-square fa-2xl"
+                      style="color: #808080"
+                    ></i>
+                  </button>
+                  <button class="save">
+                    <i
+                      class="fa-regular fa-floppy-disk fa-2xl"
+                      style="color: #808080"
+                    ></i>
+                  </button>
+  
+                  <button class="delete">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 13 14"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.20214 4.98548H6.87158V10.5073H8.20214V4.98548Z"
+                        fill="#808080"
+                      />
+                      <path
+                        d="M5.46239 4.98548H4.13184V10.5073H5.46239V4.98548Z"
+                        fill="#808080"
+                      />
+                      <path
+                        d="M12.478 2.16712C12.4754 2.03061 12.4295 1.89846 12.3469 1.78975C12.2642 1.68104 12.1492 1.6014 12.0184 1.56232C11.9596 1.53782 11.8974 1.52252 11.8339 1.51696H8.28678C8.1525 1.07791 7.88082 0.693554 7.51174 0.420471C7.14265 0.147388 6.69564 0 6.23651 0C5.77738 0 5.33038 0.147388 4.96129 0.420471C4.5922 0.693554 4.32053 1.07791 4.18625 1.51696H0.639107C0.580679 1.51814 0.522686 1.52729 0.46674 1.54418H0.45162C0.313182 1.58701 0.193338 1.67547 0.11163 1.79515C0.0299214 1.91483 -0.00883041 2.05866 0.00169348 2.20319C0.0122174 2.34771 0.071396 2.48441 0.169579 2.59099C0.267763 2.69757 0.399158 2.76774 0.542339 2.79006L1.25298 12.5334C1.26382 12.9127 1.41693 13.2741 1.68191 13.5458C1.94688 13.8175 2.30435 13.9797 2.68332 14H9.78668C10.1662 13.9804 10.5244 13.8186 10.79 13.5468C11.0556 13.2751 11.2092 12.9132 11.22 12.5334L11.9277 2.79914C12.0802 2.77797 12.22 2.70232 12.3212 2.58615C12.4223 2.46999 12.478 2.32116 12.478 2.16712ZM6.23651 1.21456C6.3661 1.21458 6.49427 1.24146 6.61294 1.29351C6.73161 1.34556 6.8382 1.42164 6.92598 1.51696H5.54704C5.63459 1.42135 5.74114 1.34507 5.85986 1.29299C5.97859 1.24092 6.10687 1.21421 6.23651 1.21456ZM9.78668 12.7904H2.68332C2.60168 12.7904 2.47467 12.6573 2.45955 12.4457L1.75798 2.81123H10.715L10.0135 12.4457C9.99836 12.6573 9.87135 12.7904 9.78668 12.7904Z"
+                        fill="#808080"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div> -->
+              <div class="imgtxt1">
+                <div class="img"></div>
+                <div class="imgtxt">You have no To-do Items As of now</div>
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="works-3 flex">
+            <div class="box-1 flex">
+              <span class="td">Started</span>
+              <span class="td-txt">0</span>
+            </div>
+            <div class="box-2 flex">
+              <span class="low">Low Priority</span>
+              <span class="low-txt">0</span>
+            </div>
+            <div class="box-3 flex">
+              <span class="med">Medium Priority</span>
+              <span class="med-txt">0</span>
+            </div>
+            <div class="box-4 flex">
+              <span class="high">High Priority</span>
+              <span class="high-txt">0</span>
+            </div>
+          </div>
+
+          <div class="works-4 flex">
+            <div class="box-1 flex">
+              <span class="td">Completed</span>
+              <span class="td-txt">0</span>
+            </div>
+            <div class="box-2 flex">
+              <span class="low">Low Priority</span>
+              <span class="low-txt">0</span>
+            </div>
+            <div class="box-3 flex">
+              <span class="med">Medium Priority</span>
+              <span class="med-txt">0</span>
+            </div>
+            <div class="box-4 flex">
+              <span class="high">High Priority</span>
+              <span class="high-txt">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
