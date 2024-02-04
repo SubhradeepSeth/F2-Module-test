@@ -49,7 +49,7 @@ let imgTxt = document.querySelector(".imgtxt1");
 console
 function addTask() {
   imgTxt.style.display = "none";
-  let works2 = document.querySelector(".boss");
+  let works2 = document.querySelector(".works-2");
   let addTask1 = document.createElement("div");
   addTask1.classList.add("add-task");
   let toDoEdit = document.createElement("div");
@@ -250,14 +250,14 @@ let blow = 0,
 // Function to update counts based on task state (start, in-progress, done)
 function startDone(k) {
   let worksMain = k.parentNode.parentNode.parentNode.parentNode;
-  let box1 = worksMain.children[2].children[0].children[1];
-  let box2 = worksMain.children[2].children[1].children[1];
-  let box3 = worksMain.children[2].children[2].children[1];
-  let box4 = worksMain.children[2].children[3].children[1];
-  let box5 = worksMain.children[3].children[0].children[1];
-  let box6 = worksMain.children[3].children[1].children[1];
-  let box7 = worksMain.children[3].children[2].children[1];
-  let box8 = worksMain.children[3].children[3].children[1];
+  let box1 = worksMain.children[3].children[0].children[1];
+  let box2 = worksMain.children[3].children[1].children[1];
+  let box3 = worksMain.children[3].children[2].children[1];
+  let box4 = worksMain.children[3].children[3].children[1];
+  let box5 = worksMain.children[4].children[0].children[1];
+  let box6 = worksMain.children[4].children[1].children[1];
+  let box7 = worksMain.children[4].children[2].children[1];
+  let box8 = worksMain.children[4].children[3].children[1];
   let opt1 = k.children[1];
   let opt2 = k.children[2];
   let strike = k.parentNode.parentNode.children[2].children[1];
